@@ -25,5 +25,8 @@
   "homepage": "https://github.com/voonic/tuiter-node-server-app#readme",
   "dependencies": {
     "express": "^4.18.2"
+  },
+  "engines": {
+    "node": "16.x"
   }
 }
