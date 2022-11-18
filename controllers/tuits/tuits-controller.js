@@ -7,7 +7,9 @@ const updateTuit = (req, res) => {
   const tuitIndex = tuits.findIndex(
     (t) => t._id == tuitdIdToUpdate)
   tuits[tuitIndex] =
-    { ...tuits[tuitIndex], ...updates };
+  {
+    ...tuits[tuitIndex], ...updates,
+  };
   res.sendStatus(200);
 }
 
@@ -20,6 +22,8 @@ const createTuit = (req, res) => {
   newTuit._id = (new Date()).getTime() + '';
   newTuit.likes = 0;
   newTuit.liked = false;
+  newTuit.replies = 0;
+  newTuit.retuits = 0;
   tuits.push(newTuit);
   res.json(newTuit);
 }
