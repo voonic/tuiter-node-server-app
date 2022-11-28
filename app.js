@@ -6,6 +6,12 @@ import UserController
   from "./controllers/users/users-controller.js"
 import TuitsController
   from "./controllers/tuits/tuits-controller.js";
+import mongoose from "mongoose";
+
+mongoose.connect(process.env.DBURL, () => {
+  console.log("Connection Successful");
+});
+
 const app = express();
 app.use(cors())
 app.use(express.json());
