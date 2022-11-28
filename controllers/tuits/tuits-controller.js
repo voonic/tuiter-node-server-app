@@ -16,6 +16,7 @@ const findTuits = async (req, res) => {
 
 const createTuit = async (req, res) => {
   const newTuit = req.body;
+
   newTuit.likes = 0;
   newTuit.liked = false;
   newTuit.dislikes = 0;
